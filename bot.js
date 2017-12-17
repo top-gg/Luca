@@ -8,7 +8,7 @@
  */
 
 let bot = require("discord.js");
-var Discord = new Discord.Client();
+var Discord = new bot.Client();
 if (process) {
 	process.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.H3hC6Q.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
 } else {
