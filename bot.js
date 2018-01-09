@@ -38,7 +38,7 @@ Discord.on('message', function (message) {
   });
   		Discord.on('message', function (message) {
 			if (message.content === '!help') {
-				return message.author.send('Commands: `!help`, `!ping`, `!8ball`, `!roll`, `!eval`');
+				return message.author.send('Commands: `!help`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`');
 			  }
   });
   
@@ -96,5 +96,10 @@ Discord.on('message', function(message) {
 	}
 });
 
+Discord.on('message', function(message) {
+	if (message.content.startsWith('!say ')) {
+		return message.reply(message.content.substring('!say '.length));
+	}
+});
 
 Discord.login(process ? process.token : window.token);
