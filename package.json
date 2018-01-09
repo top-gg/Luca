@@ -5,7 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: test is needed pls kthx\" && exit 1",
-    "start": "no start script 4 u"
+    "start": "echo \"no start script 4 u\" && exit 1"
   },
   "author": "bots.discord.pw",
   "license": "ISC",
