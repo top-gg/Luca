@@ -36,9 +36,16 @@ Discord.on('message', function (message) {
 		return message.reply('Aleyküm selam.');
 	  }
   });
+
+Discord.on('message', function (message) {
+	if (message.content === '!say') {
+		return message.reply(message.content.substr(5));
+	  }
+});
+
   		Discord.on('message', function (message) {
 			if (message.content === '!help') {
-				return message.author.send('Commands: `!help`, `!ping`, `!8ball`, `!roll`');
+				return message.author.send('Commands: `!help`, `!ping`, `!say`, `!8ball`, `!roll`, `!eval`');
 			  }
   });
   
@@ -72,6 +79,12 @@ Discord.on('message', function (message) {
 Discord.on('message', function (message) {
 	if (message.content === '!roll') {
 		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
+	  }
+});
+
+Discord.on('message', function (message) {
+	if (message.content === '!eval') {
+		return message.reply(eval(message.content.substr(6)));
 	  }
 });
 
