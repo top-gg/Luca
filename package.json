@@ -1,10 +1,11 @@
 {
   "name": "luca",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "best bot 4 discord",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: test is needed pls kthx\" && exit 1",
+    "start": "echo \"no start script 4 u\" && exit 1"
   },
   "author": "bots.discord.pw",
   "license": "ISC",
