@@ -36,16 +36,9 @@ Discord.on('message', function (message) {
 		return message.reply('Aleyküm selam.');
 	  }
   });
-
-Discord.on('message', function (message) {
-	if (message.content === '!say') {
-		return message.reply(message.content.substr(5));
-	  }
-});
-
   		Discord.on('message', function (message) {
 			if (message.content === '!help') {
-				return message.author.send('Commands: `!help`, `!ping`, `!say`, `!8ball`, `!roll`, `!eval`');
+				return message.author.send('Commands: `!help`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`');
 			  }
   });
   
@@ -83,12 +76,6 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', function (message) {
-	if (message.content === '!eval') {
-		return message.reply(eval(message.content.substr(6)));
-	  }
-});
-
-Discord.on('message', function (message) {
 	if (message.content.startsWith('!')) {
 		return message.reply('Unknown command!');
           } 
@@ -101,5 +88,18 @@ Discord.on('message', function (message) {
     }
 });
 
+Discord.on('message', function(message) {
+	if (message.content.startsWith('!eval ')) {
+		const script = message.content.substring('!eval '.length);
+		const result = eval(script);
+		return message.reply(result.toString());
+	}
+});
+
+Discord.on('message', function(message) {
+	if (message.content.startsWith('!say ')) {
+		return message.reply(message.content.substring('!say '.length));
+	}
+});
 
 Discord.login(process ? process.token : window.token);
