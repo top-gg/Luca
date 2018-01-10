@@ -7,44 +7,35 @@
  * https://discordbots.org/bot/264811613708746752
  */
 
-let bot = require("discord.js");
-var Discord = new bot.Client();
-if (process) {
-	process.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.H3hC6Q.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
-} else {
-	window.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.H3hC6Q.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
-}
+const { Client } = require('discord.js');
+var bot = new Client();
+const token = 'MjY0ODExNjEzNzA4NzQ2NzUy.H3hC6Q.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
 
-Discord.on('ready', () => {
-  console.log(`Logged in as ${Discord.user.tag}!`);
+bot.on('ready', () =>
+{
+   console.log('[===] Hey, ' + bot.user.tag + ' is ready! [===]');	
 });
 
-Discord.on('message', function (message) {
-  if (message.content === 'ping' || message.content === '!ping') {
-    return message.reply('Pong!');
-  }
-});
-
-Discord.on('message', function (message) {
-	if (message.content === 'hi') {
-		return message.reply('Hello!');
-	  }
-  });
-  
-  Discord.on('message', function (message) {
-	if (message.content === 'sa') {
-		return message.reply('Aleyküm selam.');
-	  }
-  });
-  		Discord.on('message', function (message) {
-			if (message.content === '!help') {
-				return message.author.send('Commands: `!help`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`');
-			  }
-  });
-  
-  Discord.on('message', function (message) {
-	if (msg.content.startsWith('!8ball')) {
-		const replies = ["It is certain",
+bot.on('message', (message) =>
+{
+    if (message.content === 'ping' || message.content === '!ping') 
+    {
+        message.reply("**[Ping]** Pong! :ping_pong: (`666ms`)"); // Memes.
+    }
+    if (message.content === 'hi')
+    {
+	message.reply("**[Hello]** Hi! :wave:");    
+    }
+    if (message.content === 'sa')
+    {
+	 message.reply('Aleyküm selam.');
+    }
+    if (message.content === 'help')
+    {
+	 message.author.send("Bot Commands: `!help` `!ping` `!8ball` `!roll` `!eval` `!say`");
+    }
+	if (message.content.startsWith('!8ball')) {
+		const uwu = ["It is certain",
 		"It is decidedly so",
 		"Without a doubt",
 		"Yes, definitely",
@@ -64,42 +55,32 @@ Discord.on('message', function (message) {
 		"My sources say no",
 		"Outlook not so good",
 		"Very doubtful"];
-		message.replytext = Math.floor((Math.random() * replies.length) + 0);
+		message.replytext = Math.floor((Math.random() * uwu.length) + 0);
 		return message.reply(replies[message.replytext]);
 	  }
-});
-
-Discord.on('message', function (message) {
+          if (message.content.startsWith('!say ')) {
+		return message.reply(message.content.substring('!say '.length));
+	  }
+	  
 	if (message.content === '!roll') {
 		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
 	  }
-});
-
-Discord.on('message', function (message) {
 	if (message.content.startsWith('!')) {
 		return message.reply('Unknown command!');
-          } 
-});
-
-Discord.on('message', function (message) {
+          }
 	const randomNumber = Math.random();
     if (randomNumber < 0.05) {
 		return message.reply(`LEVEL UP! YOU ARE NOW LEVEL **${Math.floor((Math.random() * 21) + 2)}**`);
     }
-});
-
-Discord.on('message', function(message) {
 	if (message.content.startsWith('!eval ')) {
 		const script = message.content.substring('!eval '.length);
 		const result = eval(script);
 		return message.reply(result.toString());
 	}
-});
 
-Discord.on('message', function(message) {
 	if (message.content.startsWith('!say ')) {
 		return message.reply(message.content.substring('!say '.length));
 	}
 });
 
-Discord.login(process ? process.token : window.token);
+bot.login(token);
