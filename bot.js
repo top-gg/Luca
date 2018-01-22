@@ -43,7 +43,7 @@ Discord.on('message', function (message) {
   });
   
   Discord.on('message', function (message) {
-	if (msg.content.startsWith('!8ball')) {
+	if (message.content.startsWith('!8ball')) {
 		const replies = ["It is certain",
 		"It is decidedly so",
 		"Without a doubt",
