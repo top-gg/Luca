@@ -1,6 +1,6 @@
 /**
  * Luca - The best bot you'll need for managing and informing members of the server
- * © Discord Bot List 2k17
+ * © Discord Bot List 2k18
  * 
  * This bot contains all the features you'd ever want from a Discord bot and it's fully open source and free!!
  * Clone and host it yourself and add it to discordbots.org or just invite the bot to your server because I am hosting this in Heroku 24/7!
