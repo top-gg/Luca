@@ -38,7 +38,7 @@ Discord.on('message', function (message) {
   });
   		Discord.on('message', function (message) {
 			if (message.content === '!help') {
-				return message.author.send('Commands: `!help`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`');
+				return message.author.send('Commands: `!help`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
 			  }
   });
   
@@ -101,5 +101,13 @@ Discord.on('message', function(message) {
 		return message.reply(message.content.substring('!say '.length));
 	}
 });
+
+Discord.on('message', function (message) {
+		if (message.content.startsWith('!randomcat') && true){
+ const randomcat = 'https://i.imgur.com/jjqKt7t.gifv';
+   return message.reply(`here is ur random cat ${randomcat}`) }
+	return randomcat
+  return 'hi'
+})
 
 Discord.login(process ? process.token : window.token);
