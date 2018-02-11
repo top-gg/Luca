@@ -82,6 +82,15 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', function (message) {
+	if (message.content === '!thonk') {
+		Discord.users.forEach(g => {
+			g.send("thonk")
+		})
+
+	  }
+});
+
+Discord.on('message', function (message) {
 	const randomNumber = Math.random();
     if (randomNumber < 0.05) {
 		return message.reply(`LEVEL UP! YOU ARE NOW LEVEL **${Math.floor((Math.random() * 21) + 2)}**`);
