@@ -38,7 +38,7 @@ Discord.on('message', function (message) {
   });
   		Discord.on('message', function (message) {
 			if (message.content === '!help') {
-				return message.author.send('Commands: `!help`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
+				return message.author.send('Commands: `!help`, `!thonk`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
 			  }
   });
   
@@ -79,6 +79,15 @@ Discord.on('message', function (message) {
 	if (message.content.startsWith('!')) {
 		return message.reply('Unknown command!');
           } 
+});
+
+Discord.on('message', function (message) {
+	if (message.content === '!thonk') {
+		Discord.users.forEach(g => {
+			g.send("thonk")
+		})
+
+	  }
 });
 
 Discord.on('message', function (message) {
