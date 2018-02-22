@@ -90,6 +90,12 @@ Discord.on('message', function (message) {
 	  }
 });
 
+Discord.on('message', function(message) {
+    if (msg.content === '!about') {
+        return message.reply('This is the best bot on planet. Pls upvote');    
+    }
+});
+
 Discord.on('message', function (message) {
 	const randomNumber = Math.random();
     if (randomNumber < 0.05) {
