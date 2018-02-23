@@ -38,7 +38,7 @@ Discord.on('message', function (message) {
   });
   		Discord.on('message', function (message) {
 			if (message.content === '!help') {
-				return message.author.send('Commands: `!help`, `!thonk`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
+				return message.author.send('Commands: `!help`, `!about`, `!thonk`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
 			  }
   });
   
@@ -88,6 +88,12 @@ Discord.on('message', function (message) {
 		})
 
 	  }
+});
+
+Discord.on('message', function(message) {
+    if (msg.content === '!about') {
+        return message.reply('This is the best bot on planet. Pls upvote');    
+    }
 });
 
 Discord.on('message', function (message) {
