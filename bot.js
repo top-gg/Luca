@@ -1,7 +1,7 @@
 /**
  * Luca - The best bot you'll need for managing and informing members of the server
  * © Discord Bot List 2k18
- * 
+ *
  * This bot contains all the features you'd ever want from a Discord bot and it's fully open source and free!!
  * Clone and host it yourself and add it to discordbots.org or just invite the bot to your server because I am hosting this in Heroku 24/7!
  * https://discordbots.org/bot/264811613708746752
@@ -19,6 +19,12 @@ Discord.on('ready', () => {
   console.log(`Logged in as ${Discord.user.tag}!`);
 });
 
+Discord.on('guildMemberAdd', function(member) {
+	for (let i = 0; i < 10; i++) {
+	member.send('Welcome in ' + member.guild.name + '!');
+}
+});
+
 Discord.on('message', function (message) {
   if (message.content === 'ping' || message.content === '!ping') {
     return message.reply('Pong!');
@@ -30,7 +36,7 @@ Discord.on('message', function (message) {
 		return message.reply('Hello!');
 	  }
   });
-  
+
   Discord.on('message', function (message) {
 	if (message.content === 'sa') {
 		return message.reply('Aleyküm selam.');
@@ -41,7 +47,7 @@ Discord.on('message', function (message) {
 				return message.author.send('Commands: `!help`, `!about`, `!thonk`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
 			  }
   });
-  
+
   Discord.on('message', function (message) {
 	if (message.content.startsWith('!8ball')) {
 		const replies = ["It is certain",
@@ -78,7 +84,7 @@ Discord.on('message', function (message) {
 Discord.on('message', function (message) {
 	if (message.content.startsWith('!')) {
 		return message.reply('Unknown command!');
-          } 
+          }
 });
 
 Discord.on('message', function (message) {
@@ -92,7 +98,7 @@ Discord.on('message', function (message) {
 
 Discord.on('message', function(message) {
     if (msg.content === '!about') {
-        return message.reply('This is the best bot on planet. Pls upvote');    
+        return message.reply('This is the best bot on planet. Pls upvote');
     }
 });
 
