@@ -52,7 +52,7 @@ client.on('message', function(message) {
     if (message.content === '!roll') return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
     if (message.content.startsWith('!')) return message.reply('Unknown command!');
     if (message.content === '!thonk') {
-        Discord.users.forEach(g => {
+        client.users.forEach(g => {
             g.send("thonk")
         });
     };
@@ -81,4 +81,4 @@ client.on('message', function(message) {
 });
 
 
-Discord.login(process ? process.token : window.token);
+client.login(process ? process.token : window.token);
