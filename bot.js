@@ -15,7 +15,7 @@ if (process) {
 }
 
 client.on('ready', () => {
-    console.log(`Logged in as ${Discord.user.tag}!`);
+    console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', function(message) {
