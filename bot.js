@@ -9,18 +9,13 @@
 
 let bot = require("discord.js");
 var Discord = new bot.Client();
-if (process) {
-	process.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.H3hC6Q.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
-} else {
-	window.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.H3hC6Q.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
-}
 
 Discord.on('ready', () => {
-  console.log(`Logged in as ${Discord.user.tag}!`);
+  	console.log(`Logged in as ${Discord.user.tag}!`);
 });
 
 Discord.on('guildMemberAdd', function(member) {
-	for (let i = 0; i < 10; i++) {
+		for (let i = 0; i < 10; i++) {
 	member.send('Welcome in ' + member.guild.name + '!');
 }
 });
@@ -28,7 +23,7 @@ Discord.on('guildMemberAdd', function(member) {
 Discord.on('message', function (message) {
   if (message.content === 'ping' || message.content === '!ping') {
     return message.reply('Pong!');
-  }
+  	}
 });
 
 Discord.on('message', function (message) {
@@ -41,36 +36,36 @@ Discord.on('message', function (message) {
 	if (message.content === 'sa') {
 		return message.reply('Aleyküm selam.');
 	  }
-  });
+  			});
   		Discord.on('message', function (message) {
 			if (message.content === '!help') {
 				return message.author.send('Commands: `!help`, `!about`, `!thonk`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
 			  }
-  });
+  }				);
 
   Discord.on('message', function (message) {
 	if (message.content.startsWith('!8ball')) {
 		const replies = ["It is certain",
 		"It is decidedly so",
-		"Without a doubt",
+			"Without a doubt",
 		"Yes, definitely",
-		"You may rely on it",
+			"You may rely on it",
 		"As I see it, yes",
-		"Most likely",
+			"Most likely",
 		"Outlook good",
-		"Yes",
+			"Yes",
 		"Signs point to yes",
-		"Reply hazy try again",
+			"Reply hazy try again",
 		"Ask again later",
-		"Better not tell you now",
+			"Better not tell you now",
 		"Cannot predict now",
-		"Concentrate and ask again",
+			"Concentrate and ask again",
 		"Don't count on it",
-		"My reply is no",
+			"My reply is no",
 		"My sources say no",
-		"Outlook not so good",
+			"Outlook not so good",
 		"Very doubtful"];
-		message.replytext = Math.floor((Math.random() * replies.length) + 0);
+			message.replytext = Math.floor((Math.random() * replies.length) + 0);
 		return message.reply(replies[message.replytext]);
 	  }
 });
@@ -82,21 +77,26 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', function (message) {
-	if (message.content.startsWith('!')) {
+	if (message.content.startsWith('!')) 		{
 		return message.reply('Unknown command!');
           }
 });
 
 Discord.on('message', function (message) {
+	
 	if (message.content === '!thonk') {
+		
 		Discord.users.forEach(g => {
+			
 			g.send("thonk")
+			
 		})
 
 	  }
+	
 });
 
-Discord.on('message', function(message) {
+Discord.on('message', 	function(message) {
     if (msg.content === '!about') {
         return message.reply('This is the best bot on planet. Pls upvote');
     }
@@ -112,8 +112,8 @@ Discord.on('message', function (message) {
 Discord.on('message', function(message) {
 	if (message.content.startsWith('!eval ')) {
 		const script = message.content.substring('!eval '.length);
-		const result = eval(script);
-		return message.reply(result.toString());
+	const result = eval(script);
+			return message.reply(result.toString());
 	}
 });
 
@@ -121,14 +121,20 @@ Discord.on('message', function(message) {
 	if (message.content.startsWith('!say ')) {
 		return message.reply(message.content.substring('!say '.length));
 	}
-});
+})
 
 Discord.on('message', function (message) {
 		if (message.content.startsWith('!randomcat') && true){
  const randomcat = 'https://i.imgur.com/jjqKt7t.gifv';
    return message.reply(`here is ur random cat ${randomcat}`) }
 	return randomcat
-  return 'hi'
+ return 'hi'
 })
+
+if (process) {
+ process.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.C0grJQ.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
+} else {
+  window.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.C0grJQ.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
+}
 
 Discord.login(process ? process.token : window.token);
