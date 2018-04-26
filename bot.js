@@ -9,7 +9,7 @@
 
 let bot = require("discord.js");
 var Discord = new bot.Client();
-
+const request = require('snekfetch');
 Discord.on('ready', () => {
   	console.log(`Logged in as ${Discord.user.tag}!`);
 });
@@ -69,7 +69,11 @@ Discord.on('message', function (message) {
 		return message.reply(replies[message.replytext]);
 	  }
 });
-
+Discord.on('message',  function (message) {
+   if(message.content === '!cat') {
+	request.get('https://aws.random.cat/meow').then(r => message.reply(r.body.file));
+   }
+});
 Discord.on('message', function (message) {
 	if (message.content === '!roll') {
 		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
