@@ -32,6 +32,13 @@ Discord.on('message', function (message) {
 	  }
   });
 
+Discord.on('message',  function (message) {
+  const cat = request.get('https://aws.random.cat/meow');
+   if(message.content === '!cat') {
+	cat.then(r => message.reply(r.body.file));
+   }
+});
+
   Discord.on('message', function (message) {
 	if (message.content === 'sa') {
 		return message.reply('Aleyküm selam.');
