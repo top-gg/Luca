@@ -9,6 +9,7 @@
 
 let bot = require("discord.js");
 var Discord = new bot.Client();
+const request = require('snekfetch');
 
 Discord.on('ready', () => {
   	console.log(`Logged in as ${Discord.user.tag}!`);
