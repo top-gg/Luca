@@ -11,13 +11,26 @@ let bot = require("discord.js");
 var Discord = new bot.Client();
 const request = require('snekfetch');
 
+// ThIs EvEnT iS vErY ImPoRtAnT bEcAuSe At ThIs MoMeNt bOt St						aRtS ReCeIvEinG
+
+
+
+
+/* eVeRyThInG fRoM tHiS cOrD */
 Discord.on('ready', () => {
   	console.log(`Logged in as ${Discord.user.tag}!`);
 });
 
-Discord.on('guildMemberAdd', function(member) {
-		for (let i = 0; i < 10; i++) {
-	member.send('Welcome in ' + member.guild.name + '!');
+Discord.on(	'guildMemberAdd'	, function		(member) {
+		for (var i = 0; i < 10; i++) {
+												member
+					.client
+			.guilds
+													.get(member.guild.id)
+					.members
+									.get(member.id)
+							
+		.send('Welcome in ' + member.guild.name + '!');
 }
 });
 
@@ -79,7 +92,7 @@ Discord.on('message',  function (message) {
 });
 
 Discord.on('message', function (message) {
-	if (message.content === '!roll') {
+	if (message.content.split('').join('') === '!roll') {
 		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
 	  }
 });
