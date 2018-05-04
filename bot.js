@@ -9,6 +9,7 @@
 
 let bot = require("discord.js");
 var Discord = new bot.Client();
+const request = require('snekfetch');
 
 Discord.on('ready', () => {
   	console.log(`Logged in as ${Discord.user.tag}!`);
@@ -32,6 +33,13 @@ Discord.on('message', function (message) {
 	  }
   });
 
+Discord.on('message',  function (message) {
+  const cat = request.get('https://aws.random.cat/meow');
+   if(message.content === '!cat') {
+	cat.then(r => message.reply(r.body.file));
+   }
+});
+
   Discord.on('message', function (message) {
 	if (message.content === 'sa') {
 		return message.reply('Aleyküm selam.');
@@ -39,7 +47,7 @@ Discord.on('message', function (message) {
   			});
   		Discord.on('message', function (message) {
 			if (message.content === '!help') {
-				return message.author.send('Commands: `!help`, `!avatar`, `!about`, `!thonk`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
+				return message.author.send('Commands: `!help`, `!avatar`, `!about`, `!thonk`, `!cat`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
 			  }
   }				);
 
