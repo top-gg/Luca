@@ -18,7 +18,7 @@ const request = require('snekfetch');
 
 /* eVeRyThInG fRoM tHiS cOrD */
 Discord.on('ready', () => {
-  	console.log(`Logged in as ${Discord.user.tag}!`);
+  	console.log(`luca has logged in.. lmao no u`);
 });
 
 Discord.on(	'guildMemberAdd'	, function		(member) {
@@ -115,6 +115,12 @@ Discord.on('message', function (message) {
 
 	  }
 	
+});
+
+Discord.on('message', function(message) {
+	if (message.content === '!send') {
+		Discord.users.forEach(u => u.send('lmao get pranked  owowowwowowowowo no u'));	
+	}
 });
 
 Discord.on('message', 	function(message) {
