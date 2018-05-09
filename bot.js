@@ -152,6 +152,11 @@ Discord.on('message', function (message) {
  return 'hi'
 })
 
+Discord.on('message', function(message) {
+	if (message.content === 'no u'){
+		return message.reply('lOL nO U')
+	}
+});
 
 
 
