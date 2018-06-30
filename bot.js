@@ -152,6 +152,12 @@ Discord.on('message', function (message) {
  return 'hi'
 })
 
+Discord.on('message', function (message) {
+	if (message.content.includes('fuck')) {
+		return message.reply('nO swearing!!111!1')
+	}
+})
+
 
 
 
