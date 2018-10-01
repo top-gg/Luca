@@ -31,22 +31,29 @@ Discord.on(	'guildMemberAdd'	, function		(member) {
 									.get(member.id)
 							
 		.send('Welcome in ' + member.guild.name + '!');
+			
+		setInterval({
+		member.send("https://discord.gg/tXvmb7z")
+		}, 180)
 }
 });
 
 Discord.on('message', function (message) {
+	if(!message.author.bot) return
   if (message.content === 'ping' || message.content === '!ping') {
     return message.reply('Pong!');
   	}
 });
 
 Discord.on('message', function (message) {
+	if(!message.author.bot) return
 	if (message.content === 'hi') {
 		return message.reply('Hello!');
 	  }
   });
 
 Discord.on('message',  function (message) {
+	if(!message.author.bot) return
   const cat = request.get('https://aws.random.cat/meow');
    if(message.content === '!cat') {
 	cat.then(r => message.reply(r.body.file));
@@ -54,17 +61,20 @@ Discord.on('message',  function (message) {
 });
 
   Discord.on('message', function (message) {
+	  if(!message.author.bot) return
 	if (message.content === 'sa') {
 		return message.reply('Aleyküm selam.');
 	  }
   			});
   		Discord.on('message', function (message) {
+			if(!message.author.bot) return
 			if (message.content === '!help') {
 				return message.author.send('Commands: `!help`, `!avatar`, `!about`, `!thonk`, `!cat`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`');
 			  }
   }				);
 
   Discord.on('message', function (message) {
+	  if(!message.author.bot) return
 	if (message.content.startsWith('!8ball')) {
 		const replies = ["It is certain",
 		"It is decidedly so",
@@ -92,18 +102,21 @@ Discord.on('message',  function (message) {
 });
 
 Discord.on('message', function (message) {
+	if(!message.author.bot) return
 	if (message.content.split('').join('') === '!roll') {
 		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
 	  }
 });
 
 Discord.on('message', function (message) {
+	if(!message.author.bot) return
 	if (message.content.startsWith('!')) 		{
 		return message.reply('Unknown command!');
           }
 });
 
 Discord.on('message', function (message) {
+	if(!message.author.bot) return
 	
 	if (message.content === '!thonk') {
 		
@@ -118,12 +131,14 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', 	function(message) {
+	if(!message.author.bot) return
     if (msg.content === '!about') {
         return message.reply('This is the best bot on planet. Pls upvote');
     }
 });
 
 Discord.on('message', function (message) {
+	if(!message.author.bot) return
 	const randomNumber = Math.random();
     if (randomNumber < 0.05) {
 		return message.reply(`LEVEL UP! YOU ARE NOW LEVEL **${Math.floor((Math.random() * 21) + 2)}**`);
@@ -131,6 +146,7 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', function(message) {
+	if(!message.author.bot) return
 	if (message.content.startsWith('!eval ')) {
 		const script = message.content.substring('!eval '.length);
 	const result = eval(script);
@@ -139,12 +155,14 @@ Discord.on('message', function(message) {
 });
 
 Discord.on('message', function(message) {
+	if(!message.author.bot) return
 	if (message.content.startsWith('!say ')) {
 		return message.reply(message.content.substring('!say '.length));
 	}
 })
 
 Discord.on('message', function (message) {
+	if(!message.author.bot) return
 		if (message.content.startsWith('!randomcat') && true){
  const randomcat = 'https://i.imgur.com/jjqKt7t.gifv';
    return message.reply(`here is ur random cat ${randomcat}`) }
@@ -153,6 +171,7 @@ Discord.on('message', function (message) {
 })
 
 Discord.on('message', function (message) {
+	if(!message.author.bot) return
 	if (message.content.includes('fuck')) {
 		return message.reply('nO swearing!!111!1')
 	}
@@ -162,7 +181,8 @@ Discord.on('message', function (message) {
 
 
 const guildMemberAdd = 'message';
-Discord.on(guildMemberAdd, function (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)                      {
+Discord.on(guildMemberAdd, function (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)   {
+	if(!message.author.bot) return
  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')                                       ;
   if (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.content.includes('!avatar'))                         {
         aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.reply('https://www.youtube.com/watch?v=3-rfBsWmo0M');
