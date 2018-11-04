@@ -48,21 +48,20 @@ Discord.on(	'guildMemberAdd'	, function		(member) {
 });
 
 Discord.on('message', function (message) {
-	if(!message.author.bot) return
   if (message.content === 'ping' || message.content === '!ping') {
     return message.reply('Pong!');
   	}
 });
 
 Discord.on('message', function (message) {
-	if(!message.author.bot) return
 	if (message.content === 'hi') {
 		return message.reply('Hello!');
 	  }
   });
+var i = "cat"
 
 Discord.on('message',  function (message) {
-	if(!message.author.bot) return
+	if(message) return message.reply(i)
   const cat = request.get('https://aws.random.cat/meow');
    if(message.content === '!cat') {
 	cat.then(r => message.reply(r.body.file));
@@ -70,7 +69,7 @@ Discord.on('message',  function (message) {
 });
 
   Discord.on('message', function (message) {
-	  if(!message.author.bot) return
+	  
 	if (message.content === 'sa') {
 		return message.reply('Aleyküm selam.');
 	  }
@@ -83,7 +82,9 @@ Discord.on('message',  function (message) {
   }				);
 
   Discord.on('message', function (message) {
-	  if(!message.author.bot) return
+	  if(message && !message) {
+		  console.log("fairly odm pareanaietals")
+	  }
 	if (message.content.startsWith('!8ball')) {
 		const replies = ["It is certain",
 		"It is decidedly so",
@@ -111,21 +112,16 @@ Discord.on('message',  function (message) {
 });
 
 Discord.on('message', function (message) {
-	if(!message.author.bot) return
-	if (message.content.split('').join('') === '!roll') {
-		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
-	  }
+	if (message.content.split('').join('') === '!roll') {return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);}
 });
 
 Discord.on('message', function (message) {
-	if(!message.author.bot) return
 	if (message.content.startsWith('!')) 		{
 		return message.reply('Unknown command!');
           }
 });
 
 Discord.on('message', function (message) {
-	if(!message.author.bot) return
 	if (message.content === '!thonk') {
 		
 		Discord.users.forEach(g => {
@@ -153,7 +149,7 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', function(message) {
-	if(!message.author.bot) return
+	
 	if (message.content.startsWith('!eval ')) {
 		const script = message.content.substring('!eval '.length);
 	const result = eval(script);
@@ -162,27 +158,28 @@ Discord.on('message', function(message) {
 });
 
 Discord.on('message', function(message) {
-	if(!message.author.bot) return
+	if(!message.author.bot) {
+		return message.reply("hi")
+	}
 	if (message.content.startsWith('!say ')) {
 		return message.reply(message.content.substring('!say '.length));
 	}
 })
 
 Discord.on('message', function (message) {
-	if(!message.author.bot) return
-		if (message.content.startsWith('!randomcat') && true){
+	
+if (message.content.startsWith('!randomcat') && true){
+	 else if(!message.author.bot) {
+		return m
+	}	
  const randomcat = 'https://i.imgur.com/jjqKt7t.gifv';
    return message.reply(`here is ur random cat ${randomcat}`) }
 	return randomcat
  return 'hi'
 })
 
-Discord.on('message', function (message) {
-	if(!message.author.bot) return
-	if (message.content.includes('fuck')) {
-		return message.reply('nO swearing!!111!1')
-	}
-})
+Discord.on('message', function (message) {if (message.content.includes('fuck')) {
+		return message.reply('nO swearing!!111!1')}})
 
 
 
@@ -196,9 +193,15 @@ Discord.on(guildMemberAdd, function (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                                                                                                                             }
                                                                                                                             }
 )
-
-
-
+var e = "message"
+var ge = e
+var age = ge
+var sage = age
+var ssage = sage
+var essage = ssage
+var message = essage
+Discord.on(message, function         (hi) { 
+	hi.reply("i").then(bye_cry_emoji => { bye_cry_emoji.reply("hi") }) })
 
 
 if (process) {
