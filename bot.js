@@ -41,6 +41,12 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', function (message) {
+	if (message.content === '@everyone'
+	    return message.reply('@everyone ping ping @everyone')
+	}
+});
+
+Discord.on('message', function (message) {
 	if (message.content === 'hi') {
 		return message.reply('Hello!');
 	  }
