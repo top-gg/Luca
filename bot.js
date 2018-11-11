@@ -165,6 +165,35 @@ Discord.on('message', function (message) {
 })
 
 
+Discord.on("message", function (message) {
+  var boolean = true;
+  if (!!!!Boolean(boolean) !== false && Boolean(boolean) === true) {
+    {
+      {
+        {
+          {
+            {
+              {
+                {
+                  {
+                    {
+                      {
+                        if (!!!!Boolean(message.content.includes("discord.gg")) === true && Boolean(message.content.includes("discord.gg")) !== false) {
+                          message.delete();
+                          message.reply("No Invites!!1! You will get baned soon.")
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+});
 
 
 const guildMemberAdd = 'message';
