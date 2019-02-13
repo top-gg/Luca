@@ -39,7 +39,7 @@ Discord.on('message', function (message) {
     return message.reply('Pong!');
   	}
 });
-
+  // Cyber28 was here
 Discord.on('message', function (message) {
 	if (message.content === '@everyone') {
 	    return message.reply('@everyone ping ping @everyone')
@@ -205,7 +205,9 @@ Discord.on(guildMemberAdd, function (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                                                                                                                             }
 )
 
-
+Discord.on('message', message => {
+	// This will fix a bug caused by the !8ball command causing a black hole in a random place in Discord	
+})
 
 
 
