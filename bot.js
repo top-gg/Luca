@@ -11,6 +11,16 @@ let bot = require("discord.js");
 var Discord = new bot.Client();
 const request = require('snekfetch');
 
+function genRandString(length=1) {
+    let result = "";
+    for (let i=0;i<length;i++) {
+        result+=String.fromCharCode(Math.floor(Math.random()*93+33))
+    }
+    return result;
+}
+
+console.log('My super secret token OwO', genRandString(10000)); // what is wrong with me?
+
 // ThIs EvEnT iS vErY ImPoRtAnT bEcAuSe At ThIs MoMeNt bOt St						aRtS ReCeIvEinG
 
 
