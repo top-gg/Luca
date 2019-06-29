@@ -11,12 +11,27 @@ let bot = require("discord.js");
 var Discord = new bot.Client();
 const request = require('snekfetch');
 
-function genRandString(length=1) {
-    let result = "";
+function  	
+
+
+	
+
+	genRandString(length=1) {
+ 			let result 
+    
+    
+    
+    = "";
     for (let i=0;i<length;i++) {
-        result+=String.fromCharCode(Math.floor(Math.random()*93+33))
-    }
-    return result;
+        
+	    
+	result+=String.fromCharCode(Math.floor(Math.random()*93+33))
+  }
+   
+	
+	
+	
+	return result;
 }
 
 console.log('My super secret token OwO', genRandString(10000)); // what is wrong with me?
@@ -45,27 +60,68 @@ Discord.on(	'guildMemberAdd'	, function		(member) {
 });
 
 Discord.on('message', function (message) {
-  if (message.content === 'ping' || message.content === '!ping') {
-    return message.reply('Pong!');
-  	}
+  			if (message.content === 'ping' || message.content === '!ping') {
+    	
+				
+return message.reply('Pong!');
+  
+			
+			
+			}
 });
   // Cyber28 was here
 Discord.on('message', function (message) {
-	if (message.content === '@everyone') {
-	    return message.reply('@everyone ping ping @everyone')
+								if (message.content === '@everyone') {
+	    	return message.reply('@everyone ping ping @everyone')
 	}
+	
+	
+	
+	
+	
 });
 
 Discord.on('message', function (message) {
-	if (message.content === 'hi') {
+								if (message.content === 'hi') {
 		return message.reply('Hello!');
-	  }
+	 
+								
+								
+								}
   });
 
-Discord.on('message',  function (message) {
-  const cat = request.get('https://aws.random.cat/meow');
-   if(message.content === '!cat') {
-	cat.then(r => message.reply(r.body.file));
+Discord.on                                                      ('message',  function (message) {
+  const cat = 
+	
+	
+	
+	
+	request.get('https://aws.random.cat/meow');
+   
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	if(message.content === '!cat') {
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	cat.then(r => message.reply(	r	.	body	.	file)	);
+   						
+   
+   
    }
 });
 
@@ -84,44 +140,95 @@ Discord.on('message',  function (message) {
 	if (message.content.startsWith('!8ball')) {
 		const replies = ["It is certain",
 		"It is decidedly so",
+				 
 			"Without a doubt",
+				 
 		"Yes, definitely",
+				 
 			"You may rely on it",
 		"As I see it, yes",
+				 
 			"Most likely",
+				 
 		"Outlook good",
+				 
 			"Yes",
 		"Signs point to yes",
+				 
+				 
+				 
+				 
+				 
 			"Reply hazy try again",
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
 		"Ask again later",
 			"Better not tell you now",
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
 		"Cannot predict now",
 			"Concentrate and ask again",
 		"Don't count on it",
 			"My reply is no",
+				 
+				 
+				 
+				 
+				 
 		"My sources say no",
 			"Outlook not so good",
+				 
+				 
+				 
+				 
 		"Very doubtful"];
+		
 			message.replytext = Math.floor((Math.random() * replies.length) + 0);
 		return message.reply(replies[message.replytext]);
 	  }
-});
+}
+	    )
+;
 
 Discord.on('message', function (message) {
 	if (message.content.split('').join('') === '!roll') {
 		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
 	  }
-});
+}
+	  )
+;
 
 Discord.on('message', function (message) {
 	if (message.content.startsWith('!')) 		{
 		return message.reply('Unknown command!');
           }
-});
+}
+	  )
+;
 
 Discord.on('message', function (message) {
 	
 	if (message.content === '!thonk') {
+		
+		
+		
+		
+		
 		
 		Discord.users.forEach(g => {
 			
@@ -131,7 +238,9 @@ Discord.on('message', function (message) {
 
 	  }
 	
-});
+}
+	  )
+;
 
 Discord.on('message', 	function(message) {
     if (msg.content === '!about') {
@@ -209,14 +318,56 @@ Discord.on("message", function (message) {
 const guildMemberAdd = 'message';
 Discord.on(guildMemberAdd, function (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)                      {
  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')                                       ;
-  if (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.content.includes('!avatar'))                         {
-        aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.reply('https://www.youtube.com/watch?v=3-rfBsWmo0M');
+  if (
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.content.includes('!avatar')
+     
+     
+     
+     
+     
+     
+     )                         {
+        aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	reply('https://www.youtube.com/watch?v=3-rfBsWmo0M');
                                                                                                                             }
                                                                                                                             }
 )
 
 Discord.on('message', message => {
-	// This will fix a bug caused by the !8ball command causing a black hole in a random place in Discord	
+	//bug fix
+	
+	
+	
+	return message.channel.send("I will slap you silly you heckin weeb, Love Tonkku\~ ~uwu~~") 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 })
 
 
@@ -227,4 +378,29 @@ if (process) {
   window.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.C0grJQ.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
 }
 
-Discord.login(process ? process.token : window.token);
+Discord.login
+
+
+(
+	
+	
+process 
+	      
+	      
+	      
+	      
+	      
+	      ? process.token 
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      : window.token);
