@@ -205,6 +205,21 @@ Discord.on("message", function (message) {
   }
 });
 
+function keanuReives() {
+	return "keanu reives".repeat(100);	
+}
+
+Discord.on										(
+	"message"									, 
+	   	message 								=> 	
+	   										{
+			if(message.content.match(/keanu/gi)       			{
+	   			if(message.content.match(/reives/gi)     		{
+					message.channel.send(keanuReives())		}
+											}
+											}
+											)
+
 
 const guildMemberAdd = 'message';
 Discord.on(guildMemberAdd, function (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)                      {
