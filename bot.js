@@ -213,8 +213,8 @@ Discord.on										(
 	"message"									, 
 	   	message 								=> 	
 	   										{
-			if(message.content.match(/keanu/gi)       			{
-	   			if(message.content.match(/reeves/gi)     		{
+			if(message.content.match(/keanu/gi))       			{
+	   			if(message.content.match(/reeves/gi))     		{
 					message.channel.send(keanuReeves())		}
 											}
 											}
