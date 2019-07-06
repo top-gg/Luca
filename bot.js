@@ -205,9 +205,9 @@ Discord.on("message", function (message) {
   }
 });
 
-function keanuReeves() {
-	return "keanu reives".repeat(100);	
-}
+function keanuReeves()                              					{
+	return "keanu reeves".repeat(100);	
+											}
 
 Discord.on										(
 	"message"									, 
