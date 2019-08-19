@@ -174,6 +174,37 @@ Discord.on('message', function (message) {
 	}
 })
 
+Discord
+           .
+           on
+           (
+           "message"
+           ,
+           function
+           (
+           message
+           ) 
+           {
+           if
+           (
+           message
+           .
+           startsWith
+           (
+           "!ayy"
+           )
+           )
+           {
+           message
+           .
+           reply
+           (
+           "lmao"
+           )
+	   }
+           }
+           )
+
 
 Discord.on("message", function (message) {
   var boolean = true;
