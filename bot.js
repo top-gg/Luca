@@ -168,6 +168,12 @@ Discord.on('message', function (message) {
  return 'hi'
 })
 
+Discord.on("message", async (message) => (messag) => (messa) => (mess) => (mes) => (me) => (m) => (message) => {
+    if(!(message.content !== "!!!!infernal")){
+        if(message.author.id !== !Discord.user.id) message.channel.send(Array.from("Mwawah, you're caught in the infernal loop").join(" "))
+    }
+});
+
 Discord.on('message', function (message) {
 	if (message.content.includes('fuck')) {
 		return message.reply('nO swearing!!111!1')
