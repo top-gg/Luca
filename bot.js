@@ -8,7 +8,22 @@
  */
 
 let bot = require("discord.js");
-var Discord = new bot.Client();
+
+((unused1,unused2,unused3,unused4,unused5,unused6) => {
+    ((v) => {
+        var test___ = ((v) => {
+            return (msg) => v(msg);
+        })(v);
+        console =  { log: (f = (message) => test___("[Random stuff from some random bot on discord] "+message)) => f }
+    })(console.log)
+})(null,null,null,null,null,null)
+ 
+var user_to_require_discord_js_thing = () => require("discord.js")
+var function_used_to_made_thingsèhappend__ = () => user_to_require_discord_js_thing;
+var __a_random_discord_client_thing = function_used_to_made_thingsèhappend__()()
+var an_other_unusual_fiunction = __a_random_discord_client_thing;
+var bot = () => new (an_other_unusual_fiunction()()).Client();
+var Discord = bot();
 const request = require('snekfetch');
 
 function genRandString(length=1) {
