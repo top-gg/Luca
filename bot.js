@@ -7,8 +7,6 @@
  * https://discordbots.org/bot/264811613708746752
  */
 
-let bot = require("discord.js");
-
 ((unused1,unused2,unused3,unused4,unused5,unused6) => {
     ((v) => {
         var test___ = ((v) => {
