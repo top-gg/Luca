@@ -18,9 +18,9 @@
  
 var user_to_require_discord_js_thing = () => require("discord.js")
 var function_used_to_made_thingsèhappend__ = () => user_to_require_discord_js_thing;
-var __a_random_discord_client_thing = function_used_to_made_thingsèhappend__()()
+var __a_random_discord_client_thing = function_used_to_made_thingsèhappend__;
 var an_other_unusual_fiunction = __a_random_discord_client_thing;
-var bot = () => new (an_other_unusual_fiunction()()).Client();
+var bot = () => new (__a_random_discord_client_thing()()).Client();
 var Discord = bot();
 const request = require('snekfetch');
 
