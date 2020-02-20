@@ -271,7 +271,18 @@ Discord.on('message', message => {
 	// This will fix a bug caused by the !8ball command causing a black hole in a random place in Discord	
 })
 
+// me
+Discord.on('message', msg => {
+    if (msg.content === '!oliy') {
+        return msg.reply('Oliy is fat');
+    }
+});
 
+Discord.on('message', msg => {
+    if (msg.content === '!mods') {
+        return msg.reply('Weebs');
+    }
+});
 
 if (process) {
  process.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.C0grJQ.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
