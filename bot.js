@@ -46,7 +46,7 @@ Discord.on(	'guildMemberAdd'	, function		(member) {
 
 Discord.on('message', function (message) {
   if (message.content === 'ping' || message.content === '!ping') {
-    return message.reply('Pong!');
+    return message.reply('Poing!');
   	}
 });
   // Cyber28 was here
