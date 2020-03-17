@@ -62,6 +62,10 @@ Discord.on('message', function (message) {
 	  }
   });
 
+  function ebola() {
+    return                                                                                                                                                                                              "message"
+  }
+
 Discord.on('message',  function (message) {
   const cat = request.get('https://aws.random.cat/meow');
    if(message.content === '!cat') {
@@ -107,6 +111,21 @@ Discord.on('message',  function (message) {
 	  }
 });
 
+Discord.on(ebola(), function      (mmmmmmmmmeeeeeeeeeeeessssssssssaaaaaaaaggggggggeeeeeeee) {
+                                        if       (mmmmmmmmmeeeeeeeeeeeessssssssssaaaaaaaaggggggggeeeeeeee
+      .content
+                      .includes(
+                                                          'corona')        )
+                                                          
+                                                             {
+    mmmmmmmmmeeeeeeeeeeeessssssssssaaaaaaaaggggggggeeeeeeee
+                                           .   reply(
+      
+      'yA"ll WaNT CORONa? https://i.imgur.com/4m4Q3K8.jpg')
+  }
+})
+
+
 Discord.on('message', function (message) {
 	if (message.content.split('').join('') === '!roll') {
 		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
@@ -134,7 +153,7 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', 	function(message) {
-    if (msg.content === '!about') {
+    if (message.content === '!about') {
         return message.reply('This is the best bot on planet. Pls upvote');
     }
 });
@@ -164,7 +183,7 @@ Discord.on('message', function (message) {
 		if (message.content.startsWith('!randomcat') && true){
  const randomcat = 'https://i.imgur.com/jjqKt7t.gifv';
    return message.reply(`here is ur random cat ${randomcat}`) }
-	return randomcat
+//	return randomcat
  return 'hi'
 })
 
@@ -194,7 +213,7 @@ Discord
            if
            (
            message
-           .
+           .content.
            startsWith
            (
            "!ayy"
@@ -285,7 +304,7 @@ Discord.on('message', msg => {
 });
 
 if (process) {
- process.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.C0grJQ.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
+ process.token = 'NjgzNDE5NzUyNDA3ODkyMDE1.Xm-3iw.6MCG5tYs30vUr3aTwLAy6M-UlWE';
 } else {
   window.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.C0grJQ.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
 }
