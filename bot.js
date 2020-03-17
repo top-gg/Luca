@@ -32,14 +32,23 @@ Discord.on('ready', () => {
 });
 
 Discord.on(	'guildMemberAdd'	, function		(member) {
-		for (var i = 0; i < 10; i++) {
+		const 	Meth 	=			Math;
+		for 			(var i = 0; i < 10; i++) 		{
 												member
 					.client
 			.guilds
 													.get(member.guild.id)
 					.members
-									.get(member.id)
-							
+									.filter(m => m.id === member.id)
+							.array()
+			[
+					Meth
+								.ceil(Meth
+												.floor(Meth
+				.random()
+									)
+						)
+											]
 		.send('Welcome in ' + member.guild.name + '!');
 }
 });
