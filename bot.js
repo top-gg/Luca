@@ -8,7 +8,9 @@
  */
 
 let bot = require("discord.js");
-var Discord = new bot.Client();
+var Discord = new bot.Client(); // More clients = more speed yes yes oliy is fat
+var discord = new bot.Client();
+var ThisIsMeOwo = new bot.Client();
 const request = require('snekfetch');
 
 function genRandString(length=1) {
@@ -23,7 +25,7 @@ console.log('My super secret token OwO', genRandString(10000)); // what is wrong
 
 // ThIs EvEnT iS vErY ImPoRtAnT bEcAuSe At ThIs MoMeNt bOt St						aRtS ReCeIvEinG
 
-
+console.log("🦀") // Yes crabs yes
 
 
 /* eVeRyThInG fRoM tHiS cOrD */
