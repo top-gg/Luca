@@ -309,9 +309,9 @@ console          .log(ascii); m.                                   channel
                                                                   + ascii)
                                                                       .then
 (_                                                                      =>{
-console.log(tonk)}                                                        )
+console.log(ascii)}                                                        )
 .catch(_ =>{console                                                        
-.log(ascii, tonk);
+.log(ascii, ascii);
 console.log('command run') })}})                                                                                                          
 /************************************************************************ */
 
