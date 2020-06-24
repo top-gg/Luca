@@ -58,7 +58,7 @@ Discord.on('message', function (message) {
 
 Discord.on('message', function (message) {
 	if (message.content === 'hi') {
-		return message.reply('Hello!');
+		return message.reply("https://dbl.steals-your.creditcard/TONKKU");
 	  }
   });
 
