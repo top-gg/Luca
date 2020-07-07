@@ -10,9 +10,8 @@ Users are given this role when they are muted.
 The permissions may need extra setup in the channel overrides.
 You may also make a channel called "mod-log", Luca will attempt to post logs in there, just like the official DBL bot
 # Features [Extended]
-We have replicated 
+We have replicated and/or added
 -wrongserver
--helptest
 -ask2ask
 -notr
 -helpcom
@@ -31,14 +30,8 @@ We have replicated
 -help_i_dont_have_ideas
 -queuetr
 -atmods-tr
--auctionstime
--invitemanager
 -ideas
 -needdev
--verified
--api
--popbot
--bigask2ask
 -mutedbot
 -declinedbot
 -checkdms
@@ -48,21 +41,17 @@ We have replicated
 -politelystop
 -cantspeakturk
 -lang
--checkmybot
 -freespeach
 -botcommands
--notrplus
--trqueue
--declinereason-tr
--leaguefull
 -cute
 -nsfw
 -langwar
 -etiquette
 -discordreport
--commonprefix
 -bignohello
 -botabuse
 -verifybot
 -b (-ban)
+-k (-kick)
+-m (-mute <reason> | <time in days>)
 just so you can have fun!
