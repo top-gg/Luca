@@ -1,5 +1,7 @@
+# THIS BOT IS W.I.P, DO NOT CLONE YET
 # Luca
 Luca is the best bot you'll need for managing and informing members of the server
+SEE OUR [PRIVACY POLICY](https://legal.animalbot.xyz/)
 # Features
 We have added all of the features from the actual dbl luca bot!
 Such as -dotpost, everyone's favourite and -notr, another favourite
