@@ -30,4 +30,4 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-client.login(client.config.token);
+client.login(client.config.ttoken);

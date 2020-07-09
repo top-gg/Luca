@@ -1,4 +1,3 @@
-# THIS BOT IS W.I.P, DO NOT CLONE YET
 # Luca
 Luca is the best bot you'll need for managing and informing members of the server
 SEE OUR [PRIVACY POLICY](https://legal.animalbot.xyz/)
@@ -6,52 +5,17 @@ SEE OUR [PRIVACY POLICY](https://legal.animalbot.xyz/)
 We have added all of the features from the actual dbl luca bot!
 Such as -dotpost, everyone's favourite and -notr, another favourite
 # Setup
-Users are given this role when they are muted. 
-The permissions may need extra setup in the channel overrides.
-You may also make a channel called "mod-log", Luca will attempt to post logs in there, just like the official DBL bot
-# Features [Extended]
-We have replicated and/or added
--wrongserver
--ask2ask
--notr
--helpcom
--kickedbot
--bothacked
--upto
--dsldown
--resetvotes
--moreinfo
--vps
--voting
--useful_js_debugging
--nohello
--auctions
--hardrequest
--help_i_dont_have_ideas
--queuetr
--atmods-tr
--ideas
--needdev
--mutedbot
--declinedbot
+You can make a channel called "mod-log", Luca will attempt to post logs in there, just like the official DBL bot
+# Features (Extended) - Full List of commands [here](https://burbca.animalbot.xyz)
+We have replicated
+-dotpost
 -checkdms
--xyproblem
--topgg
--botopinions
 -politelystop
--cantspeakturk
--lang
--freespeach
--botcommands
--cute
--nsfw
--langwar
--etiquette
--discordreport
--bignohello
--botabuse
--verifybot
--b (-ban)
--k (-kick)
--m (-mute <reason> | <time in days>)
-just so you can have fun!
+-hardrequest
+-atmods
+-mute
+-ban
+-kick
+AND ADDED
+a bunch of image api
+just so you can have a fun and fast moderation bot!

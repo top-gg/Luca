@@ -1,4 +1,4 @@
 {
     "token":"super-duper-secret-token",
-    "prefixes":["-", "<@729817831163559957>", "<@!729817831163559957>"]
+    "prefix":"-"
 }

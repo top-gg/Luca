@@ -4,6 +4,7 @@ module.exports = (client, message) => {
   
     // Ignore messages not starting with the prefix (in config.json)
     if (message.content.indexOf(client.config.prefix) !== 0) return;
+    if(!message.channel.permissionsFor(message.guild.me).has("SEND_MESSAGES") || !message.channel.permissionsFor(message.guild.me).has("ATTACH_FILES") || !message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS"))return;
   
     // Our standard argument/command name definition.
     const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
