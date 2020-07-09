@@ -6,6 +6,7 @@ const config = require("./config.json")
 client.config = config;
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setActivity('with my commands | -help')
 });
 
 fs.readdir("./events/", (err, files) => {
@@ -28,6 +29,49 @@ fs.readdir("./commands/", (err, files) => {
     console.log(`Attempting to load command ${commandName}`);
     client.commands.set(commandName, props);
   });
+});
+client.on('guildCreate', async (guild) => {
+  // v11
+  //const channel = client.channels.get(id); get v12 pleb
+  // v12
+  const channel = client.channels.cache.get('717433736806924338');
+
+  // finally
+  if (!channel) return;
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  const Embed = new Discord.MessageEmbed()
+  .setColor('#' + randomColor)
+  .setAuthor('Guild Join Listener')
+  .addFields(
+    {name: 'Guild Name', value:guild.name},
+    {name: 'Guild ID', value:guild.id},
+    {name: 'Guild Owner', value:guild.ownerID},
+    {name: 'Member Count', value:guild.memberCount}
+  )
+  .setFooter('Burbca has joined a new server >V<')
+  channel.send(Embed)//(`Joined ${guild.name}`);
+});
+client.on('guildDelete', (guild) => {
+  // v11
+  //const channel = client.channels.get(id); get v12 pleb
+
+  // v12
+  const channel = client.channels.cache.get('717433736806924338');
+
+  // finally
+  if (!channel) return;
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  const Embed = new Discord.MessageEmbed()
+  .setColor('#' + randomColor)
+  .setAuthor('Guild Kick Listener')
+  .addFields(
+    {name: 'Guild Name', value:guild.name},
+    {name: 'Guild ID', value:guild.id},
+    {name: 'Guild Owner', value:guild.ownerID},
+    {name: 'Member Count', value:guild.memberCount}
+  )
+  .setFooter('Burbca has been kicked from a server >ʌ<')
+  channel.send(Embed)//(`Joined ${guild.name}`);
 });
 
 client.login(client.config.token);
