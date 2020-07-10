@@ -16,7 +16,7 @@ if(!message.guild.me.hasPermission("KICK_MEMBERS"))return
     }
     if(tokick.kickable === false){
         embed = new Discord.MessageEmbed()
-        .setDescription("<:tickno:730766875822260254> | I cannot ban this person, they have a higher role than me!")
+        .setDescription("<:tickno:730766875822260254> | I cannot ban this person, they have a higher or the same role as me")
         return message.channel.send(embed)
         }
   if(!message.member.hasPermission("BAN_MEMBERS") && !message.member.hasPermission("KICK_MEMBERS")){
