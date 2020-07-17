@@ -1,4 +1,5 @@
 {
     "token":"super-duper-secret-token",
-    "prefix":"-"
+    "prefix":"-",
+    "ownerID":"your-discord-id"
 }
