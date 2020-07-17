@@ -30,7 +30,7 @@ const b = a.split("|")
     try{
         await toban.ban({reason: b[1]})
         embed = new Discord.MessageEmbed()
-        .setDescription(`<:tickyes:730766875470069821> | Member **${toban.displayName}** successfully banned`)
+        .setDescription(`<:tickyes:730766875470069821> | Member **${toban.displayName}** successfully banned for **${b[1]}**`)
         message.channel.send(embed)
        try{
         const modlogembed = new Discord.MessageEmbed()

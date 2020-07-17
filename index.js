@@ -74,4 +74,4 @@ client.on('guildDelete', (guild) => {
   channel.send(Embed)//(`Joined ${guild.name}`);
 });
 
-client.login(client.config.token);
+client.login(client.config.ttoken);

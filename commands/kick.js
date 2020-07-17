@@ -29,16 +29,16 @@ if(!message.guild.me.hasPermission("KICK_MEMBERS"))return
     message.channel.send(embed)
   }else{
     try{
-        await toban.kick({reason: b[1]})
+        await tokick.kick({reason: b[1]})
         embed = new Discord.MessageEmbed()
         .setDescription(`<:tickyes:730766875470069821> | Member **${tomute.displayName}** successfully kicked for **${b[1]}**`)
         message.channel.send(embed)
        try{
         const modlogembed = new Discord.MessageEmbed()
-        .setTitle("BAN")
+        .setTitle("Kick")
         .setColor("#d10000")
         .addFields(
-            {name:"**User**", value:tomute.user.tag, inline:true},
+            {name:"**User**", value:tokick.user.tag, inline:true},
             {name:"**Moderator**", value:message.author.tag, inline:true},
             {name:"**Reason**", value:b[1]}
         )
@@ -50,7 +50,7 @@ if(!message.guild.me.hasPermission("KICK_MEMBERS"))return
         message.channel.send(`Error, Possibly I don't have permissions? \nHere it is \`\`\`${e.stack}\`\`\``)
     }
   }catch(err){
-        message.channel.send(`Error, Possibly I don't have permissions \nHere it is \`\`\`${e.stack}\`\`\``)
+        message.channel.send(`Error, Possibly I don't have permissions \nHere it is \`\`\`${err.stack}\`\`\``)
     }
       }
   }

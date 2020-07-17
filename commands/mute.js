@@ -42,12 +42,8 @@ const b = a.split("|")
       reason:"mute setup"
     })
       message.guild.channels.cache.forEach(channel => {
-        channel.overwritePermissions([
-            {
-               id: muterole.id,
-               deny: ['SEND_MESSAGES', "ADD_REACTIONS"],
-            },
-          ], 'Mute setup');
+        channel.updateOverwrite(muterole.id, { SEND_MESSAGES: false, ADD_REACTIONS: false });
+
     });
 }catch(e){
       embed = new Discord.MessageEmbed()
@@ -67,7 +63,7 @@ const b = a.split("|")
 try{
   await tomute.roles.add(muterole)
   embed = new Discord.MessageEmbed()
-  .setDescription(`<:tickyes:730766875470069821> | Member **${tomute.displayName}** successfully muted for ${b[1]}`)
+  .setDescription(`<:tickyes:730766875470069821> | Member **${tomute.displayName}** successfully muted for **${b[1]}**`)
   message.channel.send(embed)
  try{
   const modlogembed = new Discord.MessageEmbed()
