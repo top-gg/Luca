@@ -6,7 +6,7 @@ const config = require("./config.json")
 client.config = config;
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity('with my commands | -help')
+  client.user.setActivity('with my commands | b!help')
 });
 
 fs.readdir("./events/", (err, files) => {
@@ -74,4 +74,4 @@ client.on('guildDelete', (guild) => {
   channel.send(Embed)//(`Joined ${guild.name}`);
 });
 
-client.login(client.config.ttoken);
+client.login(client.config.token);
