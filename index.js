@@ -6,7 +6,7 @@ const config = require("./config.json")
 client.config = config;
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity('with my commands | b!help')
+  client.user.setActivity('with my commands | -help')
 });
 
 fs.readdir("./events/", (err, files) => {
