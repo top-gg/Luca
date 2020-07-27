@@ -32,7 +32,7 @@ try{
     .setTitle("Unmute")
     .setColor("#11fa05")
     .addFields(
-        {name:"**User**", value:tounmute.user.tag, inline:true},
+        {name:"**User**", value:tounmute.user, inline:true},
         {name:"**Moderator**", value:message.author.tag, inline:true},
         {name:"**Reason**", value:b[1]}
     )

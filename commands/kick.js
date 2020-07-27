@@ -31,14 +31,14 @@ if(!message.guild.me.hasPermission("KICK_MEMBERS"))return
     try{
         await tokick.kick({reason: b[1]})
         embed = new Discord.MessageEmbed()
-        .setDescription(`<:tickyes:730766875470069821> | Member **${tomute.displayName}** successfully kicked for **${b[1]}**`)
+        .setDescription(`<:tickyes:730766875470069821> | Member **${tokick.displayName}** successfully kicked for **${b[1]}**`)
         message.channel.send(embed)
        try{
         const modlogembed = new Discord.MessageEmbed()
         .setTitle("Kick")
         .setColor("#d10000")
         .addFields(
-            {name:"**User**", value:tokick.user.tag, inline:true},
+            {name:"**User**", value:tokick.user, inline:true},
             {name:"**Moderator**", value:message.author.tag, inline:true},
             {name:"**Reason**", value:b[1]}
         )

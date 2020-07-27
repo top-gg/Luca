@@ -37,7 +37,7 @@ const b = a.split("|")
         .setTitle("BAN")
         .setColor("#d10000")
         .addFields(
-            {name:"**User**", value:toban.user.tag, inline:true},
+            {name:"**User**", value:toban.user, inline:true},
             {name:"**Moderator**", value:message.author.tag, inline:true},
             {name:"**Reason**", value:b[1]}
         )

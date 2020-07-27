@@ -70,7 +70,7 @@ try{
   .setTitle("Mute")
   .setColor("#FFFF00")
   .addFields(
-      {name:"**User**", value:tomute.user.tag, inline:true},
+      {name:"**User**", value:tomute.user, inline:true},
       {name:"**Moderator**", value:message.author.tag, inline:true},
       {name:"**Reason**", value:b[1]}
   )
