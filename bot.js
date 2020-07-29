@@ -273,7 +273,7 @@ Discord.on('message', message => {
 
 // me
 Discord.on('message', msg => {
-    if (msg.content === '!oliy') {
+    if (msg.content === '!oliy' and msg.author.id != 129908908096487424) {
         return msg.reply('Oliy is fat');
     }
 });
