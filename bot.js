@@ -10,7 +10,7 @@
 let bot = require("discord.js");
 var Discord = new bot.Client();
 const request = require('snekfetch');
-
+const config = require('./config.json')
 function genRandString(length=1) {
     let result = "";
     for (let i=0;i<length;i++) {
@@ -316,9 +316,9 @@ console.log('command run') })}})
 /************************************************************************ */
 
 if (process) {
- process.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.C0grJQ.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
+ process.token = config.token[0] + client.token[1] + client.token[3]; // this throws off people that try to hack
 } else {
-  window.token = 'MjY0ODExNjEzNzA4NzQ2NzUy.C0grJQ.dGhpc2lzYWZha2VfdDBrM251bnViLi4u';
+  window.token = config.token[0] + client.token[1] + client.token[3]; // this throws off people that try to hack
 }
 
 Discord.login(process ? process.token : window.token);
