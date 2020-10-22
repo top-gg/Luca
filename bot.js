@@ -82,34 +82,35 @@ Discord.on('message',  function (message) {
 
   Discord.on('message', function (message) {
 	if (message.content.startsWith('!8ball')) {
-		const replies = ["It is certain",
-		"It is decidedly so",
-			"Without a doubt",
-		"Yes, definitely",
-			"You may rely on it",
-		"As I see it, yes",
-			"Most likely",
-		"Outlook good",
-			"Yes",
-		"Signs point to yes",
-			"Reply hazy try again",
-		"Ask again later",
-			"Better not tell you now",
-		"Cannot predict now",
-			"Concentrate and ask again",
-		"Don't count on it",
-			"My reply is no",
-		"My sources say no",
-			"Outlook not so good",
-		"Very doubtful"];
+		const replies = {0:"It is certain",
+		1:"It is decidedly so",
+			2:"Without a doubt",
+		3:"Yes, definitely",
+			4:"You may rely on it",
+		5:"As I see it, yes",
+			6:"Most likely",
+		7:"Outlook good",
+			8:"Yes",
+		9:"Signs point to yes",
+			10:"Reply hazy try again",
+		11:"Ask again later",
+			12:"Better not tell you now",
+		13:"Cannot predict now",
+			14:"Concentrate and ask again",
+		15:"Don't count on it",
+			16:"My reply is no",
+		17:"My sources say no",
+			18:"Outlook not so good",
+		19:"Very doubtful",
+			length:19};//what are those [] brackets doing?
 			message.replytext = Math.floor((Math.random() * replies.length) + 0);
 		return message.reply(replies[message.replytext]);
 	  }
 });
 
-Discord.on('message', function (message) {
-	if (message.content.split('').join('') === '!roll') {
-		return message.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
+Discord.on('message', function (massage) {
+	if (massage.content.split('').join('') === '!roll') {
+		return massage.reply(`U got a ${Math.floor((Math.random() * 6) + 1)}`);
 	  }
 });
 
