@@ -212,6 +212,64 @@ Discord
            )
 
 
+//AlexIsOK was here
+Discord
+    .on
+    (
+        "message"
+, 
+                        function
+                    (
+                            message
+                                                ) 
+                {
+    
+                    if(
+                        !
+                            !
+                                !
+                                    !
+                                        !
+                                            !
+                                                !
+                                                    !
+                message
+                    .
+                        content 
+                        === 
+                        
+        "xetera qt"
+                    
+                                                          &&
+                    
+                        
+                    message
+                        .
+                    author
+                        .
+                    id
+                        ===
+                    "422087909634736160" //DSL
+                        
+                                        )
+message
+    .
+reply
+        (
+                            "xetera qt"
+                                )
+    .
+            then
+        (
+            (
+                r) => //newline not allowed before arrow :angeryBOYE:
+            {
+                //bottom text
+            });
+                    }
+        )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ; //haha it's longer than the line before now
+
 Discord.on("message", function (message) {
   var boolean = true;
   if (!!!!Boolean(boolean) !== false && Boolean(boolean) === true) {
