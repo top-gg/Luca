@@ -287,21 +287,36 @@ Discord.on('message', msg => {
 Discord.on('ready', () => {
 //This allows you to make a custom status that rotates!
 	let statuses = [
-        'Status 1',
-        'Status 2',
-        'Status 3',
-        'Status 4',
-        'Status 5',
-	'Status 6',
-	'Status 7',
-	'Status 8',
-	'Status 9',
-	'Status 10',
+    'Status 1'
+		,
+  'Status 2'
+		,
+      'Status 3'
+		,
+  'Status 4'
+		,
+'Status 5
+		',
+     'Status 6'
+		,
+	              'Status 7'
+		,
+	        'Status 8'
+		,
+	                                         'Status 9'
+		,
+	            'Status 10'
+		,
        ];
-//You HAVE TO HAVE 10 STATUSES FOR THIS TO WORK	
-	setInterval(function() {
-           let status = statuses[Math.floor(Math.random() * statuses.length)];
-           Discord.user.setActivity(status, {type: "WATCHING"});
+//You HAVE TO HAVE 10 STATUSES FOR THIS TO WORK	AND THE LAYOUT MUST REMAIN THE SAME
+	setInterval(
+		function() 
+		{
+           let status = 
+	       statuses[Math.floor(Math.random() * statuses.length)];
+           Discord
+		   .user
+		   	.setActivity(status, {type: "WATCHING"});
        }, 8);
 	//^ Will rotate status every 8 seconds
 });
