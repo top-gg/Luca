@@ -38,37 +38,37 @@ Discord.on('guildMemberAdd', function (member) {
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content === 'ping' || message.content === '!ping') {
 		return message.reply('Pong!');
 	}
 });
 // Cyber28 was here
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content === '@everyone') {
 		return message.reply('@everyone ping ping @everyone');
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content === 'hi') {
 		return message.reply('Hello!');
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	const cat = request.get('https://aws.random.cat/meow');
 	if (message.content === '!cat') {
 		cat.then(r => message.reply(r.body.file));
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content === 'sa') {
 		return message.reply('Aleyküm selam.');
 	}
 });
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content === '!help') {
 		return message.author.send(
 			'Commands: `!help`, `!avatar`, `!about`, `!thonk`, `!cat`, `!ping`, `!8ball`, `!roll`, `!eval`, `!say`, `!randomcat`'
@@ -76,7 +76,7 @@ Discord.on('message', function (message) {
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content.startsWith('!8ball')) {
 		const replies = [
 			'It is certain',
@@ -105,19 +105,19 @@ Discord.on('message', function (message) {
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content.split('').join('') === '!roll') {
 		return message.reply(`U got a ${Math.floor(Math.random() * 6 + 1)}`);
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content.startsWith('!')) {
 		return message.reply('Unknown command!');
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content === '!thonk') {
 		Discord.users.forEach(g => {
 			g.send('thonk');
@@ -125,13 +125,13 @@ Discord.on('message', function (message) {
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (msg.content === '!about') {
 		return message.reply('This is the best bot on planet. Pls upvote');
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	const randomNumber = Math.random();
 	if (randomNumber < 0.05) {
 		return message.reply(
@@ -140,7 +140,7 @@ Discord.on('message', function (message) {
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content.startsWith('!eval ')) {
 		const script = message.content.substring('!eval '.length);
 		const result = eval(script);
@@ -148,13 +148,13 @@ Discord.on('message', function (message) {
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content.startsWith('!say ')) {
 		return message.reply(message.content.substring('!say '.length));
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content.startsWith('!randomcat') && true) {
 		const randomcat = 'https://i.imgur.com/jjqKt7t.gifv';
 		return message.reply(`here is ur random cat ${randomcat}`);
@@ -175,19 +175,19 @@ Discord.on(
 	}
 );
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.content.includes('fuck')) {
 		return message.reply('nO swearing!!111!1');
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	if (message.startsWith('!ayy')) {
 		message.reply('lmao');
 	}
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', message => {
 	var boolean = true;
 	if (!!!!Boolean(boolean) !== false && Boolean(boolean) === true) {
 		{
