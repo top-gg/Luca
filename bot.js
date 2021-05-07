@@ -25,6 +25,9 @@ console.log('My super secret token OwO', genRandString(10000)); // what is wrong
 
 
 
+/* hello from discord.py | <3 WOLFIE_OG */
+async with ctx.channel.typing():
+	print("This is js right?")
 
 /* eVeRyThInG fRoM tHiS cOrD */
 Discord.on('ready', () => {
