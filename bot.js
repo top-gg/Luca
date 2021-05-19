@@ -50,9 +50,14 @@ Discord.on('message', function (message) {
   	}
 });
   // Cyber28 was here
+			// Dennis was also here
 Discord.on('message', function (message) {
-	if (message.content === '@everyone') {
-	    return message.reply('@everyone ping ping @everyone')
+	if (message.content [ "starts"+"With" ] ( '@everyone'		)) {
+	    			
+		
+		
+		
+					return message.reply('@everyone ping ping @everyone')
 	}
 });
 
