@@ -7,9 +7,9 @@
  * https://discordbots.org/bot/264811613708746752
  */
 
-let bot = require("discord.js");
-var Discord = new bot.Client();
-const request = require('snekfetch');
+let bot = require("discord.js");
+var Discord = new bot.Client();
+const request = require('snekfetch');
 
 function genRandString(length=1) {
     let result = "";
@@ -63,7 +63,7 @@ Discord.on('message', function (message) {
   });
 
 Discord.on('message',  function (message) {
-  const cat = request.get('https://aws.random.cat/meow');
+  const cat = request.get('https://aws.random.cat/meow');
    if(message.content === '!cat') {
 	cat.then(r => message.reply(r.body.file));
    }
@@ -71,7 +71,7 @@ Discord.on('message',  function (message) {
 
   Discord.on('message', function (message) {
 	if (message.content === 'sa') {
-		return message.reply('Aleyküm selam.');
+		return message.reply('Aleyküm selam.');
 	  }
   			});
   		Discord.on('message', function (message) {
@@ -226,7 +226,7 @@ Discord.on("message", function (message) {
                     {
                       {
                         if (!!!!Boolean(message.content.includes("discord.gg")) === true && Boolean(message.content.includes("discord.gg")) !== false) {
-                          message.delete();
+                          message.delete();
                           message.reply("No Invites!!1! You will get baned soon.")
                         }
                       }
@@ -262,7 +262,7 @@ const guildMemberAdd = 'message';
 Discord.on(guildMemberAdd, function (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)                      {
  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')                                       ;
   if (aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.content.includes('!avatar'))                         {
-        aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.reply('https://www.youtube.com/watch?v=3-rfBsWmo0M');
+        aaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.reply('https://www.youtube.com/watch?v=3-rfBsWmo0M');
                                                                                                                             }
                                                                                                                             }
 )
@@ -276,7 +276,7 @@ Discord.on('message', msg => {
     if (msg.content === '!oliy') {
         return msg.reply('Oliy is fat');
     }
-});
+});
 
 Discord.on('message', msg => {
     if (msg.content === '!mods') {
