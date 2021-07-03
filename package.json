@@ -11,6 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "snekfetch": "^4.0.0"
+    "node-uptime-robot": "^1.0.0",
+    "snekfetch": "^4.0.0",
+    "uptimerobot": "^1.0.1",
+    "uptimerobot-apiv2": "0.0.2"
   }
 }
