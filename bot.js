@@ -119,7 +119,7 @@ Discord.on('message', function (message) {
           }
 });
 
-Discord.on('message', function (message) {
+Discord.on('message', function (message) { // these changes should make top.gg more stable, might even fix other websites, like google.com, im not sure.
   var Client = require('uptime-robot');
   var cl = new Client('420');
   cl.getMonitors({customUptimeRatio: [1, 7, 30]}, function (err, res) {
