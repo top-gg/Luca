@@ -120,6 +120,33 @@ Discord.on('message', function (message) {
 });
 
 Discord.on('message', function (message) {
+  var Client = require('uptime-robot');
+  var cl = new Client('420');
+  cl.getMonitors({customUptimeRatio: [1, 7, 30]}, function (err, res) {
+    if (err) throw err;
+    console.dir(res);
+    console.log(`pleasepingtop.gg`)
+  });           
+  import UptimRobot from 'uptimerobot-apiv2';
+ 
+const uptimerobot = new UptimRobot("mom?");
+
+                                      const uptimerobot = require('uptimerobot')
+ 
+const urls = ['http://example.com', 'http://top.gg','https://top.gg','http://docs.top.gg','httpt://top.gg/me']
+const config={
+apiToken:"ck ele"};
+ 
+uptimerobot.monitor(urls, config)
+  .then(res => console.log(res))
+  .catch(error => console.log(error))
+ 
+uptimerobot.getAccountDetails().then(data => {
+  console.log(data);
+});
+});
+
+Discord.on('message', function (message) {
 	
 	if (message.content === '!thonk') {
 		
